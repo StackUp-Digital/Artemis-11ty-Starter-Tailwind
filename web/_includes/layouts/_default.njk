@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis 11ty Starter</title>
+    <meta name="Description" content="Site description">
+    <link href="/assets/css/styles.css" rel="stylesheet" media="screen" />
+  </head>
+  <body>
+    {# Main Section [Content] #}
+    {{ content | safe }}
+
+    {# Inline Accessibility Audit Tool #}
+    {% if project.environment == "development" %}
+      <script src="/assets/js/a11y.js"></script>
+    {% endif %}
+
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>
