@@ -19,10 +19,11 @@ mix
     extensions: ['html', 'js', 'njk', 'vue'],
   })
   .js('./web/resources/js/index.js', './js/')
+  .vue()
 
-  if (!mix.inProduction()) {
-    mix.js('./web/resources/js/a11y.js', './js/')
-  }
+if (!mix.inProduction()) {
+  mix.js('./web/resources/js/a11y.js', './js/')
+}
 
 // If production, minify css/js
 if (mix.inProduction()) {

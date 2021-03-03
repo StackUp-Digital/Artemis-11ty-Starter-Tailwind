@@ -1,0 +1,18 @@
+img.is-lazy-js {
+  opacity: 0;
+}
+
+img.is-lazy-js:not(.initial) {
+  transition: opacity 500ms;
+  transition-delay: 0.5s; // Added for demo purposes, this can be removed
+}
+
+img.is-lazy-js.initial,
+img.is-lazy-js.loaded,
+img.is-lazy-js.error {
+  opacity: 1;
+}
+
+img.is-lazy-js:not([src]) {
+  visibility: hidden;
+}
