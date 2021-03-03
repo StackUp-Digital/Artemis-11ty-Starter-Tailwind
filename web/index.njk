@@ -2,13 +2,25 @@
 layout: layouts/_default.njk
 ---
 
-<div class="container mx-auto py-12">
-  <h1 class="text-4xl font-bold">Artemis 11ty Starter</h1>
+<main id="app">
+  <div class="container mx-auto py-12">
+    <h1 class="text-4xl font-bold">Artemis 11ty Starter</h1>
 
-  <p>
-    This 11ty starter kit is designed to work with the <a target="_blank" class="underline" href="https://tailwindcss.com/">Tailwind CSS</a>, developed by
-    the engineers at StackUp Digital.
-  </p>
+    <p class="mb-4">
+      This 11ty starter kit is designed to work with the
+      <a target="_blank" class="underline" href="https://tailwindcss.com/"
+        >Tailwind CSS</a
+      >, developed by the engineers at StackUp Digital.
+    </p>
 
+    <div class="mb-6">
+      <notification></notification>
+    </div>
+
+    <img
+      data-src="https://images.pexels.com/photos/164446/pexels-photo-164446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      alt="Lazy Image"
+      class="is-lazy-js"
+    />
   </div>
-</div>
+</main>
