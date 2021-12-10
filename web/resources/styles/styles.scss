@@ -1,9 +1,6 @@
-@import './image';
-
-/* PurgeCSS start ignore */
 @tailwind base;
 @tailwind components;
-
-/* PurgeCSS end ignore */
-
 @tailwind utilities;
+
+/* Styles for lazy image plugin */
+@import './image';

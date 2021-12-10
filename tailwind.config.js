@@ -1,11 +1,7 @@
 module.exports = {
-  future: {
-    purgeLayersByDefault: true,
-  },
-  purge: ['./src/**/*.njk'],
+  content: ['./web/**/*.njk'],
   theme: {
     extend: {},
   },
-  variants: {},
   plugins: [],
 }

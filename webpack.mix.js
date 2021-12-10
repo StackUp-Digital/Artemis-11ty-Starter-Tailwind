@@ -2,8 +2,6 @@
 const mix = require('laravel-mix')
 const tailwindcss = require('tailwindcss')
 
-require('laravel-mix-purgecss')
-
 mix.setPublicPath('./dist/assets/')
 
 // Compile css and js
@@ -13,13 +11,7 @@ mix
     processCssUrls: false,
     postCss: [tailwindcss('./tailwind.config.js')],
   })
-  .purgeCss({
-    enabled: mix.inProduction(),
-    folders: ['src', 'templates'],
-    extensions: ['html', 'js', 'njk', 'vue'],
-  })
   .js('./web/resources/js/index.js', './js/')
-  .vue()
 
 if (!mix.inProduction()) {
   mix.js('./web/resources/js/a11y.js', './js/')
