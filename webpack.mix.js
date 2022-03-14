@@ -1,17 +1,16 @@
 // Laravel Mix
 const mix = require('laravel-mix')
-const tailwindcss = require('tailwindcss')
 
 mix.setPublicPath('./dist/assets/')
 
-// Compile css and js
 mix
-  .sass('./web/resources/styles/styles.scss', './css')
-  .options({
-    processCssUrls: false,
-    postCss: [tailwindcss('./tailwind.config.js')],
-  })
-  .js('./web/resources/js/index.js', './js/')
+  .js('./web/resources/js/index.js', './js')
+  .postCss('./web/resources/styles/styles.css', './css', [
+    require('postcss-import'),
+    require('tailwindcss/nesting'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ])
 
 if (!mix.inProduction()) {
   mix.js('./web/resources/js/a11y.js', './js/')

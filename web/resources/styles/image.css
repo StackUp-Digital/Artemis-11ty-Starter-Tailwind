@@ -4,7 +4,7 @@ img.is-lazy-js {
 
 img.is-lazy-js:not(.initial) {
   transition: opacity 500ms;
-  transition-delay: 0.5s; // Added for demo purposes, this can be removed
+  transition-delay: 0.5s;
 }
 
 img.is-lazy-js.initial,
