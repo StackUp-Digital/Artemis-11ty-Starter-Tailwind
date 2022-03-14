@@ -37,32 +37,7 @@ yarn lint
 
 We have used [laravel mix](https://laravel-mix.com/) to bundle assets. Mix is responsible for generating css with scss as well as transpiling JavaScript files. Let's take a look at the contents of the `webpack.mix.js` file.
 
-```js
-// Laravel Mix
-const mix = require('laravel-mix')
-
-// Define paths
-const paths = {
-  scss: {
-    source: './resources/styles/styles.scss',
-    dest: './assets/css/',
-  },
-  js: {
-    source: './resources/js/index.js',
-    dest: './assets/js/',
-  },
-}
-
-// Compile the scss code
-mix.sass(paths.scss.source, paths.scss.dest).js(paths.js.source, paths.js.dest)
-
-// If production, minify css/js
-if (mix.inProduction()) {
-  mix.minify(paths.scss.dest + 'styles.css').minify(paths.js.dest + 'index.js')
-}
-```
-
-If you need to configure this at any point then feel free to do so, additional API information can be retrieved on the [Mix Documentation](https://laravel-mix.com/docs/5.0/installation)
+If you need to configure this at any point then feel free to do so, additional API information can be retrieved on the [Mix Documentation](https://laravel-mix.com/docs/6.0/installation)
 
 ## Using Netlify Dev
 
@@ -81,6 +56,30 @@ $ netlify dev
 ```
 
 Netlify Dev should take care of everything from there, however, if you experience any issues please raise this with the team or raise an issue in Github.
+
+## Staying up to date with changes
+
+Say you're building a site with this starter, but you still want to be able to pull in the latest changes, you can add a remote upstream pointing to this repository.
+
+1. Navigate to your local theme folder.
+2. Verify the list of remotes and validate that you have both an origin and upstream:
+
+```
+git remote -v
+```
+
+3. If you don't see an upstream, you can add one that points to Shopify's Dawn repository:
+
+```
+git remote add upstream https://github.com/StackUp-Digital/Artemis-11ty-Starter-Tailwind.git
+```
+
+4. Pull in the latest Dawn changes into your repository:
+
+```
+git fetch upstream
+git pull upstream main
+```
 
 ## Questions or Issues?
 
