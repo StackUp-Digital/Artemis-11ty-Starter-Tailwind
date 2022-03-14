@@ -1,6 +1,6 @@
+/* Styles for lazy image plugin */
+@import './image';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Styles for lazy image plugin */
-@import './image';
