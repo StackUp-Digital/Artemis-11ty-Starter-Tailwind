@@ -5,7 +5,7 @@ templates for client projects.
 
 ## Things to consider
 
-This was created with [11ty](https://www.11ty.dev/), a very simple static site generator. Additional documentation can be found on the 11ty website. Assets are compiled with Gulp. The provided gulpfile has been configured to handle the compilation of `.scss` files.
+This was created with [11ty](https://www.11ty.dev/), a very simple static site generator. Additional documentation can be found on the 11ty website. Assets are compiled with Laravel Mix and styles are built with Tailwind.
 
 The dependencies have been acquired through [Yarn](https://yarnpkg.com). Therefore, to get started you will need to install the project dependencies with the following command:
 
@@ -35,9 +35,9 @@ yarn lint
 
 ## Asset Pipeline
 
-We have used [laravel mix](https://laravel-mix.com/) to bundle assets. Mix is responsible for generating css with scss as well as transpiling JavaScript files. Let's take a look at the contents of the `webpack.mix.js` file.
+[Laravel Mix](https://laravel-mix.com/) is responsible for bundling assets, such as CSS and JS.
 
-If you need to configure this at any point then feel free to do so, additional API information can be retrieved on the [Mix Documentation](https://laravel-mix.com/docs/6.0/installation)
+Feel free modify the configuration file as you see fit. Additional API information can be retrieved on the [Mix Documentation](https://laravel-mix.com/docs/6.0/installation)
 
 ## Using Netlify Dev
 
@@ -68,13 +68,13 @@ Say you're building a site with this starter, but you still want to be able to p
 git remote -v
 ```
 
-3. If you don't see an upstream, you can add one that points to Shopify's Dawn repository:
+3. If you don't see an upstream, you can add one that points to the Artemis starter repository:
 
 ```
 git remote add upstream https://github.com/StackUp-Digital/Artemis-11ty-Starter-Tailwind.git
 ```
 
-4. Pull in the latest Dawn changes into your repository:
+4. Pull the latest changes into your repository:
 
 ```
 git fetch upstream
