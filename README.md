@@ -39,9 +39,9 @@ yarn lint
 
 Feel free modify the configuration file as you see fit. Additional API information can be retrieved on the [Mix Documentation](https://laravel-mix.com/docs/6.0/installation)
 
-## Using Netlify Dev
+## Using Netlify Dev for Serverless Functions
 
-The holding page uses a netlify function as part of an integration we have created with the Klaviyo API. To work with this function locally we would advise using Netlify's CLI tool.
+This starter kit has been developed with the ability to create Netlify Functions for serverless tasks. To develop functions locally, we would advise using Netlify's CLI tool.
 
 Start by installing the cli tool globally:
 
